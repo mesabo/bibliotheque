@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "socket.h": "c",
+        "in.h": "c",
+        "lire.h": "c",
+        "autres.h": "c"
+    },
+    "cmake.configureOnOpen": true
+}

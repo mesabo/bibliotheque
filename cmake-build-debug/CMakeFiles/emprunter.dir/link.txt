@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/emprunter.dir/main.c.o -o emprunter 
