@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="createdb_8c" kind="file" language="C++">
+    <compoundname>createdb.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">mysql/mysql.h</includes>
+    <includes refid="createdb_8h" local="yes">../header/createdb.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>mysql/mysql.h</label>
+      </node>
+      <node id="5">
+        <label>../header/createdb.h</label>
+        <link refid="createdb_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>source/createdb.c</label>
+        <link refid="createdb_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="createdb_8c_1a740a7635aa8dc59b329a1de701648386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initdb</definition>
+        <argsstring>(MYSQL *con)</argsstring>
+        <name>initdb</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de reinitialisationde la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ON INITIALISE UNE NOUVELLE BASE DE DONNEES A LA DEMANDE DE L&apos;UTILISATEUR SI PROBLEME</para>
+<para>Dans Cette fonction, nous faisons juste une requete sql. Suppresion de la bd et creation, donc reinitialisation de la bd</para>
+<para>ON INITIALISE UNE NOUVELLE BASE DE DONNEES A LA DEMANDE DE L&apos;UTILISATEUR SI PROBLEME</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous faisons juste une requete sql. Suppresion de la bd et creation, donc reinitialisation de la bd </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/createdb.c" line="19" column="6" bodyfile="source/createdb.c" bodystart="19" bodyend="31"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="createdb_8c_1af2ee5ed33e6514d4fccdc4a151f6705e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void createdb</definition>
+        <argsstring>(MYSQL *con)</argsstring>
+        <name>createdb</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de creation de la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous faisons juste une requete sql. creation de la bd <computeroutput>testdb</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/createdb.c" line="41" column="6" bodyfile="source/createdb.c" bodystart="41" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fichier createdb contenant les fonctions createdb et initdb. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mysql/mysql.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/createdb.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"></codeline>
+<codeline lineno="19" refid="createdb_8c_1a740a7635aa8dc59b329a1de701648386" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="createdb_8c_1a740a7635aa8dc59b329a1de701648386" kindref="member">initdb</ref>(MYSQL<sp/>*con)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysql_query(con,<sp/></highlight><highlight class="stringliteral">&quot;DROP<sp/>DATABASE<sp/>IF<sp/>EXISTS<sp/>testdb&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>mysql_error(con));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mysql_close(con);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysql_query(con,<sp/></highlight><highlight class="stringliteral">&quot;CREATE<sp/>DATABASE<sp/>IF<sp/>NOT<sp/>EXISTS<sp/>testdb&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>mysql_error(con));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mysql_close(con);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>mysql_close(con);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CRE<sp/>UNE<sp/>BASE<sp/>DE<sp/>DONNEES<sp/>SI<sp/>INEXISTENTE<sp/>APPELLEE<sp/>`testdb`</highlight></codeline>
+<codeline lineno="41" refid="createdb_8c_1af2ee5ed33e6514d4fccdc4a151f6705e" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="createdb_8c_1af2ee5ed33e6514d4fccdc4a151f6705e" kindref="member">createdb</ref>(MYSQL<sp/>*con)<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mysql_query(con,<sp/></highlight><highlight class="stringliteral">&quot;CREATE<sp/>DATABASE<sp/>IF<sp/>NOT<sp/>EXISTS<sp/>testdb&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>mysql_error(con));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mysql_close(con);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>mysql_close(con);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/createdb.c"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,53 @@
+.TH "source/emprunter.c" 3 "Tue Apr 27 2021" "Version 1.1" "Bibliotheque virtuelle" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+source/emprunter.c \- Fichier emprunter contenant la fonction emprunter\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include '\&.\&./header/emprunter\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBemprunter\fP (MYSQL *con, \fBint\fP student, \fBchar\fP book[50])"
+.br
+.RI "Fonction de creation de la base de donnees\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fichier emprunter contenant la fonction emprunter\&. 
+
+
+.PP
+Definition in file \fBemprunter\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void emprunter (MYSQL * con, \fBint\fP student, \fBchar\fP book[50])"
+
+.PP
+Fonction de creation de la base de donnees\&. Dans Cette fonction, nous faisons juste une requete sql
+.PP
+\fBParameters\fP
+.RS 4
+\fI*con\fP de type MYSQL\&. 
+.br
+\fIstudent\fP de type int\&. contient l'id de l'emprunteur du bookin'\&. 
+.br
+\fIbook\fP de type char\&. Le livre a emprunter\&.\&.\&.
+.RE
+.PP
+Dans Cette fonction, nous faisons juste une requete sql 
+.PP
+Definition at line 18 of file emprunter\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bibliotheque virtuelle from the source code\&.

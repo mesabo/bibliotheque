@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="deposer_8c" kind="file" language="C++">
+    <compoundname>deposer.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">mysql/mysql.h</includes>
+    <includes refid="deposer_8h" local="yes">../header/deposer.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>../header/deposer.h</label>
+        <link refid="deposer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>source/deposer.c</label>
+        <link refid="deposer_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>mysql/mysql.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="deposer_8c_1a9f1db5b2502c2129b6db7471d105adf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deposer</definition>
+        <argsstring>(MYSQL *con, int idx)</argsstring>
+        <name>deposer</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a79a3d8790b2588b09777910863574e09" kindref="member">int</ref></type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de creation de la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dans Cette fonction, nous faisons juste une requete sql de mise a jour <simplesect kind="return"><para>On renvoie idx</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type int. contient l&apos;id &apos;id du bookin a deposer.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous faisons juste une requete sql de mise a jour <simplesect kind="return"><para>On renvoie idx </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/deposer.c" line="17" column="6" bodyfile="source/deposer.c" bodystart="17" bodyend="21"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fichier deposer contenant les fonctions deposer un bookin. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mysql/mysql.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/deposer.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="deposer_8c_1a9f1db5b2502c2129b6db7471d105adf3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="deposer_8c_1a9f1db5b2502c2129b6db7471d105adf3" kindref="member">deposer</ref>(MYSQL<sp/>*con,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx)<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>requete[200]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(requete,<sp/></highlight><highlight class="stringliteral">&quot;UPDATE<sp/>student_book<sp/>SET<sp/>rendu=1<sp/>WHERE<sp/>student<sp/>=<sp/>&apos;%d&apos;;&quot;</highlight><highlight class="normal">,<sp/>idx);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>mysql_query(con,<sp/>requete);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="source/deposer.c"/>
+  </compounddef>
+</doxygen>

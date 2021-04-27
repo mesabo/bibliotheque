@@ -1,0 +1,77 @@
+.TH "lire.c" 3 "Tue Apr 27 2021" "Version 1.1" "Bibliotheque virtuelle" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lire.c \- Fichier lire contenant la fonctions de saisie au clavier\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBlire\fP (\fBchar\fP *chaine, \fBint\fP longueur)"
+.br
+.RI "Fonction de creation de la base de donnees\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fichier lire contenant la fonctions de saisie au clavier\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Created by mesabo 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.1 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+16/04/2021 
+.RE
+.PP
+
+.PP
+Definition in file \fBlire\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "lire (\fBchar\fP * chaine, \fBint\fP longueur)"
+
+.PP
+Fonction de creation de la base de donnees\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*chaine\fP de type char\&. variables a stocker la saisie 
+.br
+\fIlongueur\fP de type int\&. Longueur de la saisie 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+On renvoie 1 si la fonction s'est déroulée sans erreur, 0 sinon 
+.RE
+.PP
+Pas d'erreur desaisie ?
+.PP
+On recherche l''Entrée'
+.PP
+Si on a trouvé le retour à la ligne
+.PP
+On remplace ce caractère par\\0
+.PP
+Definition at line 20 of file lire\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bibliotheque virtuelle from the source code\&.

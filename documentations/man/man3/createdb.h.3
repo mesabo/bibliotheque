@@ -1,0 +1,62 @@
+.TH "header/createdb.h" 3 "Tue Apr 27 2021" "Version 1.1" "Bibliotheque virtuelle" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+header/createdb.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitdb\fP (MYSQL *con)"
+.br
+.RI "Fonction de reinitialisationde la base de donnees\&. "
+.ti -1c
+.RI "void \fBcreatedb\fP (MYSQL *con)"
+.br
+.RI "Fonction de creation de la base de donnees\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "createdb (MYSQL * con)"
+
+.PP
+Fonction de creation de la base de donnees\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI*con\fP de type MYSQL\&.
+.RE
+.PP
+Dans Cette fonction, nous faisons juste une requete sql\&. creation de la bd \fCtestdb\fP 
+.PP
+Definition at line 41 of file createdb\&.c\&.
+.SS "initdb (MYSQL * con)"
+
+.PP
+Fonction de reinitialisationde la base de donnees\&. ON INITIALISE UNE NOUVELLE BASE DE DONNEES A LA DEMANDE DE L'UTILISATEUR SI PROBLEME
+.PP
+Dans Cette fonction, nous faisons juste une requete sql\&. Suppresion de la bd et creation, donc reinitialisation de la bd
+.PP
+ON INITIALISE UNE NOUVELLE BASE DE DONNEES A LA DEMANDE DE L'UTILISATEUR SI PROBLEME
+.PP
+\fBParameters\fP
+.RS 4
+\fI*con\fP de type MYSQL\&.
+.RE
+.PP
+Dans Cette fonction, nous faisons juste une requete sql\&. Suppresion de la bd et creation, donc reinitialisation de la bd 
+.PP
+Definition at line 19 of file createdb\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bibliotheque virtuelle from the source code\&.

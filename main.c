@@ -1,3 +1,10 @@
+/**
+ * \file main.c
+ * \brief Fichier main est le fichier principale, la racine .
+ * \author Created by mesabo
+ * \version 1.1
+ * \date 16/04/2021
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <mysql/mysql.h>
@@ -11,10 +18,13 @@
 #include "./header/emprunter.h"
 #include "./header/deposer.h"
 
-///P R E P R O C E S S E U R S
-void finish_with_error(MYSQL *con);
-
 /// M A  I N
+/**\fn main()
+ * \brief fonction mere, tout part d'ici, la fonction principale du projet
+ * \attention certain mot doivent etre utilise sans mofification car ils ont
+ * leur place...
+ * \todo permettre la recherche de bookin
+ */
 void main() {
     char username[50];
     char user_password[50];
@@ -139,25 +149,5 @@ void main() {
                     printf("Saisir une valeur correct entre (0-1)!");
             }
         } while (option != 0);
-
-
-        /// LISTER BIBLIOTHEQUE
-        //lister(con);
-        ///CHOISIR LE LIVRE
-//        printf("entrer numero du livre: ");
-//        lire(choix, 10);
-//        choisir(con, choix);
-//        emprunter(con, login, choix);
-        //if (strcmp(signin(con, login), "0") > 0){printf("Bonjour");}
-        //emprunter(con, login, choix);
     }
-
-
-}
-
-//////////////////////////////////////////////////////////////////////
-void finish_with_error(MYSQL *con) {
-    fprintf(stderr, "%s\n", mysql_error(con));
-    mysql_close(con);
-    exit(1);
 }

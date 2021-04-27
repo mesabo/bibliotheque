@@ -1,0 +1,68 @@
+\doxysection{source/login.c File Reference}
+\label{login_8c}\index{source/login.c@{source/login.c}}
+
+
+Fichier login contenant la fonction signin.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/mysql.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../header/login.\+h\char`\"{}}\newline
+Include dependency graph for login.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{login_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ char} $\ast$ \textbf{ signin} (M\+Y\+S\+QL $\ast$con, \textbf{ char} login[50])
+\begin{DoxyCompactList}\small\item\em Fonction de creation de la base de donnees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier login contenant la fonction signin. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{login_8c_a8ca7591ad198978de8b67e24ea24884a}} 
+\index{login.c@{login.c}!signin@{signin}}
+\index{signin@{signin}!login.c@{login.c}}
+\doxysubsubsection{signin()}
+{\footnotesize\ttfamily \textbf{ char}$\ast$ signin (\begin{DoxyParamCaption}\item[{M\+Y\+S\+QL $\ast$}]{con,  }\item[{\textbf{ char}}]{login[50] }\end{DoxyParamCaption})}
+
+
+
+Fonction de creation de la base de donnees. 
+
+Dans Cette fonction, nous faisons juste une requete sql et retournons un entier \begin{DoxyReturn}{Returns}
+On renvoie idx
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$con} & de type M\+Y\+S\+QL. \\
+\hline
+{\em login} & de type char. contient le login de l\textquotesingle{}utilisateur recupere au clavier. \\
+\hline
+{\em idx} & de type int. Un pointeur sur l\textquotesingle{}id du bookin trouve.\\
+\hline
+\end{DoxyParams}
+Dans Cette fonction, nous faisons juste une requete sql et retournons un entier \begin{DoxyReturn}{Returns}
+On renvoie idx 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file login.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{login_8c_a8ca7591ad198978de8b67e24ea24884a_icgraph}
+\end{center}
+\end{figure}

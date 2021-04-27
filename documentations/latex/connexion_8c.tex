@@ -1,0 +1,97 @@
+\doxysection{source/connexion.c File Reference}
+\label{connexion_8c}\index{source/connexion.c@{source/connexion.c}}
+
+
+Fichier choisir contenant les fonctions de connexion et savelogin.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/mysql.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../header/connexion.\+h\char`\"{}}\newline
+Include dependency graph for connexion.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{connexion_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ connexion} (M\+Y\+S\+QL $\ast$con, \textbf{ char} username[50], \textbf{ char} user\+\_\+password[50], \textbf{ char} dbname[50])
+\begin{DoxyCompactList}\small\item\em Fonction de connexion a la base de donnees. \end{DoxyCompactList}\item 
+void \textbf{ savelogin} (M\+Y\+S\+QL $\ast$con, \textbf{ char} student[50])
+\begin{DoxyCompactList}\small\item\em Fonction de reinitialisationde la base de donnees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier choisir contenant les fonctions de connexion et savelogin. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{connexion_8c_a28cd29946126a5b85757c9c201db7fb7}} 
+\index{connexion.c@{connexion.c}!connexion@{connexion}}
+\index{connexion@{connexion}!connexion.c@{connexion.c}}
+\doxysubsubsection{connexion()}
+{\footnotesize\ttfamily void connexion (\begin{DoxyParamCaption}\item[{M\+Y\+S\+QL $\ast$}]{con,  }\item[{\textbf{ char}}]{username[50],  }\item[{\textbf{ char}}]{user\+\_\+password[50],  }\item[{\textbf{ char}}]{dbname[50] }\end{DoxyParamCaption})}
+
+
+
+Fonction de connexion a la base de donnees. 
+
+Dans Cette fonction, nous etablissons une connexion a la bd.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$con} & de type M\+Y\+S\+QL. \\
+\hline
+{\em username} & de type char. Nom d\textquotesingle{}utilisateur mysal; souvent {\ttfamily root} \\
+\hline
+{\em user\+\_\+password} & de type char. Mot de passe \\
+\hline
+{\em dbname} & de type char. Nom de la bd\\
+\hline
+\end{DoxyParams}
+Dans Cette fonction, nous etablissons une connexion a la bd. 
+
+Definition at line 18 of file connexion.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{connexion_8c_a28cd29946126a5b85757c9c201db7fb7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\label{connexion_8c_a06fca051dcb50be9358dfc723db39255}} 
+\index{connexion.c@{connexion.c}!savelogin@{savelogin}}
+\index{savelogin@{savelogin}!connexion.c@{connexion.c}}
+\doxysubsubsection{savelogin()}
+{\footnotesize\ttfamily void savelogin (\begin{DoxyParamCaption}\item[{M\+Y\+S\+QL $\ast$}]{con,  }\item[{\textbf{ char}}]{student[50] }\end{DoxyParamCaption})}
+
+
+
+Fonction de reinitialisationde la base de donnees. 
+
+Dans Cette fonction, nous tentons une connexion a un compte utilisateur dans l\textquotesingle{}appli
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$con} & de type M\+Y\+S\+QL. \\
+\hline
+{\em student} & de type char. Le login avec lequel se connecter\\
+\hline
+\end{DoxyParams}
+Dans Cette fonction, nous tentons une connexion a un compte utilisateur dans l\textquotesingle{}appli 
+
+Definition at line 33 of file connexion.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{connexion_8c_a06fca051dcb50be9358dfc723db39255_icgraph}
+\end{center}
+\end{figure}

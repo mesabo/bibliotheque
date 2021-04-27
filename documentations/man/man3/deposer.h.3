@@ -1,0 +1,57 @@
+.TH "header/deposer.h" 3 "Tue Apr 27 2021" "Version 1.1" "Bibliotheque virtuelle" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+header/deposer.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBdeposer\fP (MYSQL *con, \fBint\fP idx)"
+.br
+.RI "Fonction de creation de la base de donnees\&. "
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "deposer (MYSQL * con, \fBint\fP idx)"
+
+.PP
+Fonction de creation de la base de donnees\&. Dans Cette fonction, nous faisons juste une requete sql de mise a jour 
+.PP
+\fBReturns\fP
+.RS 4
+On renvoie idx
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fI*con\fP de type MYSQL\&. 
+.br
+\fIidx\fP de type int\&. contient l'id 'id du bookin a deposer\&.
+.RE
+.PP
+Dans Cette fonction, nous faisons juste une requete sql de mise a jour 
+.PP
+\fBReturns\fP
+.RS 4
+On renvoie idx 
+.RE
+.PP
+
+.PP
+Definition at line 17 of file deposer\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bibliotheque virtuelle from the source code\&.

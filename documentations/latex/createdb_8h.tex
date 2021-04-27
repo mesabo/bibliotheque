@@ -1,0 +1,80 @@
+\doxysection{header/createdb.h File Reference}
+\label{createdb_8h}\index{header/createdb.h@{header/createdb.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/mysql.\+h$>$}\newline
+Include dependency graph for createdb.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{createdb_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{createdb_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ initdb} (M\+Y\+S\+QL $\ast$con)
+\begin{DoxyCompactList}\small\item\em Fonction de reinitialisationde la base de donnees. \end{DoxyCompactList}\item 
+void \textbf{ createdb} (M\+Y\+S\+QL $\ast$con)
+\begin{DoxyCompactList}\small\item\em Fonction de creation de la base de donnees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{createdb_8h_ad54985427c3500ddc08ac79bbfcb6e86}} 
+\index{createdb.h@{createdb.h}!createdb@{createdb}}
+\index{createdb@{createdb}!createdb.h@{createdb.h}}
+\doxysubsubsection{createdb()}
+{\footnotesize\ttfamily createdb (\begin{DoxyParamCaption}\item[{M\+Y\+S\+QL $\ast$}]{con }\end{DoxyParamCaption})}
+
+
+
+Fonction de creation de la base de donnees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$con} & de type M\+Y\+S\+QL.\\
+\hline
+\end{DoxyParams}
+Dans Cette fonction, nous faisons juste une requete sql. creation de la bd {\ttfamily testdb} 
+
+Definition at line 41 of file createdb.\+c.
+
+\mbox{\label{createdb_8h_a34480e421f6b505238590149f6eb767b}} 
+\index{createdb.h@{createdb.h}!initdb@{initdb}}
+\index{initdb@{initdb}!createdb.h@{createdb.h}}
+\doxysubsubsection{initdb()}
+{\footnotesize\ttfamily initdb (\begin{DoxyParamCaption}\item[{M\+Y\+S\+QL $\ast$}]{con }\end{DoxyParamCaption})}
+
+
+
+Fonction de reinitialisationde la base de donnees. 
+
+ON I\+N\+I\+T\+I\+A\+L\+I\+SE U\+NE N\+O\+U\+V\+E\+L\+LE B\+A\+SE DE D\+O\+N\+N\+E\+ES A LA D\+E\+M\+A\+N\+DE DE L\textquotesingle{}U\+T\+I\+L\+I\+S\+A\+T\+E\+UR SI P\+R\+O\+B\+L\+E\+ME
+
+Dans Cette fonction, nous faisons juste une requete sql. Suppresion de la bd et creation, donc reinitialisation de la bd
+
+ON I\+N\+I\+T\+I\+A\+L\+I\+SE U\+NE N\+O\+U\+V\+E\+L\+LE B\+A\+SE DE D\+O\+N\+N\+E\+ES A LA D\+E\+M\+A\+N\+DE DE L\textquotesingle{}U\+T\+I\+L\+I\+S\+A\+T\+E\+UR SI P\+R\+O\+B\+L\+E\+ME
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$con} & de type M\+Y\+S\+QL.\\
+\hline
+\end{DoxyParams}
+Dans Cette fonction, nous faisons juste une requete sql. Suppresion de la bd et creation, donc reinitialisation de la bd 
+
+Definition at line 19 of file createdb.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{createdb_8h_a34480e421f6b505238590149f6eb767b_icgraph}
+\end{center}
+\end{figure}

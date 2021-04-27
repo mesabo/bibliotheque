@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named emprunter
+# Target rules for targets named emprunterlivre
 
 # Build rule for target.
-emprunter: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emprunter
-.PHONY : emprunter
+emprunterlivre: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 emprunterlivre
+.PHONY : emprunterlivre
 
 # fast build rule for target.
-emprunter/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/build
-.PHONY : emprunter/fast
+emprunterlivre/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/build
+.PHONY : emprunterlivre/fast
 
 main.o: main.c.o
 
@@ -148,7 +148,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -157,7 +157,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -166,7 +166,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -177,7 +177,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... emprunter"
+	@echo "... emprunterlivre"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

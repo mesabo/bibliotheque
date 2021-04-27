@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="connexion_8h" kind="file" language="C++">
+    <compoundname>connexion.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">mysql/mysql.h</includes>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="connexion_8c" local="yes">source/connexion.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>header/connexion.h</label>
+        <link refid="connexion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>mysql/mysql.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>source/connexion.c</label>
+        <link refid="connexion_8c"/>
+      </node>
+      <node id="2">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>header/connexion.h</label>
+        <link refid="connexion_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="connexion_8h_1aa1ce4af191fc53fcae37591c6cee1f2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>connexion</definition>
+        <argsstring>(MYSQL *con, char username[50], char user_password[50], char dbname[50])</argsstring>
+        <name>connexion</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref></type>
+          <declname>username</declname>
+          <array>[50]</array>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref></type>
+          <declname>user_password</declname>
+          <array>[50]</array>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref></type>
+          <declname>dbname</declname>
+          <array>[50]</array>
+        </param>
+        <briefdescription>
+<para>Fonction de connexion a la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dans Cette fonction, nous etablissons une connexion a la bd.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>username</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type char. Nom d&apos;utilisateur mysal; souvent <computeroutput>root</computeroutput> </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>user_password</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type char. Mot de passe </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dbname</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type char. Nom de la bd</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous etablissons une connexion a la bd. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="header/connexion.h" line="8" column="6" bodyfile="source/connexion.c" bodystart="18" bodyend="24" declfile="header/connexion.h" declline="8" declcolumn="6"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="connexion_8h_1adb018bf517b4d15431ef4240beaa1440" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>savelogin</definition>
+        <argsstring>(MYSQL *con, char student[50])</argsstring>
+        <name>savelogin</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref></type>
+          <declname>student</declname>
+          <array>[50]</array>
+        </param>
+        <briefdescription>
+<para>Fonction de reinitialisationde la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dans Cette fonction, nous tentons une connexion a un compte utilisateur dans l&apos;appli</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>student</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type char. Le login avec lequel se connecter</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous tentons une connexion a un compte utilisateur dans l&apos;appli </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="header/connexion.h" line="14" column="6" bodyfile="source/connexion.c" bodystart="33" bodyend="38" declfile="header/connexion.h" declline="14" declcolumn="6"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mysql/mysql.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="connexion_8h_1aa1ce4af191fc53fcae37591c6cee1f2e" kindref="member">connexion</ref>(MYSQL<sp/>*con,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>username[50],<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>user_password[50],<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dbname[50]);</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="connexion_8h_1adb018bf517b4d15431ef4240beaa1440" kindref="member">savelogin</ref>(MYSQL<sp/>*con,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>student[50]);</highlight></codeline>
+    </programlisting>
+    <location file="header/connexion.h"/>
+  </compounddef>
+</doxygen>

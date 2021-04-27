@@ -1,8 +1,18 @@
+/**
+ * \file choisir.c
+ * \brief Fichier choisir contenant la fonctions de choisir un bookin.
+ */
 #include <mysql/mysql.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
+/** \fn choisir(MYSQL *con, char choix[50])
+* \brief Fonction de reinitialisationde la base de donnees.
+* \param *con de type MYSQL.
+* \param choix de type char. Le bookin choisi
+* \details Dans Cette fonction, nous enregistrons le choix de l'utilisateur (empruntur)
+*/
 void choisir(MYSQL *con, char choix[50]) {
 
     char requete[200] = "";

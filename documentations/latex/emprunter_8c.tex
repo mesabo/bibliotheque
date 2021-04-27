@@ -1,0 +1,62 @@
+\doxysection{source/emprunter.c File Reference}
+\label{emprunter_8c}\index{source/emprunter.c@{source/emprunter.c}}
+
+
+Fichier emprunter contenant la fonction emprunter.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$mysql/mysql.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../header/emprunter.\+h\char`\"{}}\newline
+Include dependency graph for emprunter.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{emprunter_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ emprunter} (M\+Y\+S\+QL $\ast$con, \textbf{ int} student, \textbf{ char} book[50])
+\begin{DoxyCompactList}\small\item\em Fonction de creation de la base de donnees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fichier emprunter contenant la fonction emprunter. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\label{emprunter_8c_a118734629d4c180732226c2ab5604698}} 
+\index{emprunter.c@{emprunter.c}!emprunter@{emprunter}}
+\index{emprunter@{emprunter}!emprunter.c@{emprunter.c}}
+\doxysubsubsection{emprunter()}
+{\footnotesize\ttfamily void emprunter (\begin{DoxyParamCaption}\item[{M\+Y\+S\+QL $\ast$}]{con,  }\item[{\textbf{ int}}]{student,  }\item[{\textbf{ char}}]{book[50] }\end{DoxyParamCaption})}
+
+
+
+Fonction de creation de la base de donnees. 
+
+Dans Cette fonction, nous faisons juste une requete sql
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$con} & de type M\+Y\+S\+QL. \\
+\hline
+{\em student} & de type int. contient l\textquotesingle{}id de l\textquotesingle{}emprunteur du bookin\textquotesingle{}. \\
+\hline
+{\em book} & de type char. Le livre a emprunter...\\
+\hline
+\end{DoxyParams}
+Dans Cette fonction, nous faisons juste une requete sql 
+
+Definition at line 18 of file emprunter.\+c.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{emprunter_8c_a118734629d4c180732226c2ab5604698_icgraph}
+\end{center}
+\end{figure}

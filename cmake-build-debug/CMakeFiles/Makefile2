@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/mesabo/CLionProjects/emprunterlivre/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/emprunter.dir/all
+all: CMakeFiles/emprunterlivre.dir/all
 
 .PHONY : all
 
@@ -82,36 +82,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/emprunter.dir/clean
+clean: CMakeFiles/emprunterlivre.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/emprunter.dir
+# Target rules for target CMakeFiles/emprunterlivre.dir
 
 # All Build rule for target.
-CMakeFiles/emprunter.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mesabo/CLionProjects/emprunterlivre/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target emprunter"
-.PHONY : CMakeFiles/emprunter.dir/all
+CMakeFiles/emprunterlivre.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/mesabo/CLionProjects/emprunterlivre/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target emprunterlivre"
+.PHONY : CMakeFiles/emprunterlivre.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/emprunter.dir/rule: cmake_check_build_system
+CMakeFiles/emprunterlivre.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mesabo/CLionProjects/emprunterlivre/cmake-build-debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/emprunter.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/emprunterlivre.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/mesabo/CLionProjects/emprunterlivre/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/emprunter.dir/rule
+.PHONY : CMakeFiles/emprunterlivre.dir/rule
 
 # Convenience name for target.
-emprunter: CMakeFiles/emprunter.dir/rule
+emprunterlivre: CMakeFiles/emprunterlivre.dir/rule
 
-.PHONY : emprunter
+.PHONY : emprunterlivre
 
 # clean rule for target.
-CMakeFiles/emprunter.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunter.dir/build.make CMakeFiles/emprunter.dir/clean
-.PHONY : CMakeFiles/emprunter.dir/clean
+CMakeFiles/emprunterlivre.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/emprunterlivre.dir/build.make CMakeFiles/emprunterlivre.dir/clean
+.PHONY : CMakeFiles/emprunterlivre.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

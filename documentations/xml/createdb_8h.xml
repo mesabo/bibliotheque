@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="createdb_8h" kind="file" language="C++">
+    <compoundname>createdb.h</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">mysql/mysql.h</includes>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <includedby refid="createdb_8c" local="yes">source/createdb.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>stdlib.h</label>
+      </node>
+      <node id="4">
+        <label>mysql/mysql.h</label>
+      </node>
+      <node id="1">
+        <label>header/createdb.h</label>
+        <link refid="createdb_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>header/createdb.h</label>
+        <link refid="createdb_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>source/createdb.c</label>
+        <link refid="createdb_8c"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="createdb_8h_1a34480e421f6b505238590149f6eb767b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>initdb</definition>
+        <argsstring>(MYSQL *con)</argsstring>
+        <name>initdb</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de reinitialisationde la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>ON INITIALISE UNE NOUVELLE BASE DE DONNEES A LA DEMANDE DE L&apos;UTILISATEUR SI PROBLEME</para>
+<para>Dans Cette fonction, nous faisons juste une requete sql. Suppresion de la bd et creation, donc reinitialisation de la bd</para>
+<para>ON INITIALISE UNE NOUVELLE BASE DE DONNEES A LA DEMANDE DE L&apos;UTILISATEUR SI PROBLEME</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous faisons juste une requete sql. Suppresion de la bd et creation, donc reinitialisation de la bd </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="header/createdb.h" line="12" column="6" bodyfile="source/createdb.c" bodystart="19" bodyend="31" declfile="header/createdb.h" declline="12" declcolumn="6"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="createdb_8h_1ad54985427c3500ddc08ac79bbfcb6e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>createdb</definition>
+        <argsstring>(MYSQL *con)</argsstring>
+        <name>createdb</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de creation de la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous faisons juste une requete sql. creation de la bd <computeroutput>testdb</computeroutput> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="header/createdb.h" line="13" column="6" bodyfile="source/createdb.c" bodystart="41" bodyend="48" declfile="header/createdb.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mysql/mysql.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"></codeline>
+<codeline lineno="12"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="createdb_8h_1a34480e421f6b505238590149f6eb767b" kindref="member">initdb</ref>(MYSQL<sp/>*con);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="createdb_8h_1ad54985427c3500ddc08ac79bbfcb6e86" kindref="member">createdb</ref>(MYSQL<sp/>*con);</highlight></codeline>
+    </programlisting>
+    <location file="header/createdb.h"/>
+  </compounddef>
+</doxygen>

@@ -1,9 +1,20 @@
+/**
+ * \file lister.c
+ * \brief Fichier lister contenant la fonction lister.
+ */
 #include <mysql/mysql.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "../header/lister.h"
 
+/**
+* \fn *lister(MYSQL *con)
+* \brief Fonction de creation de la base de donnees.
+* \param *con de type MYSQL.
+ * \details Dans Cette fonction, nous faison juste une requete sql et affichons le resultat
+* \return On renvoie idx
+*/
 void lister(MYSQL *con) {
 
     if (mysql_query(con, "SELECT * FROM books")) {

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="emprunter_8c" kind="file" language="C++">
+    <compoundname>emprunter.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">mysql/mysql.h</includes>
+    <includes refid="emprunter_8h" local="yes">../header/emprunter.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>source/emprunter.c</label>
+        <link refid="emprunter_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>string.h</label>
+      </node>
+      <node id="4">
+        <label>../header/emprunter.h</label>
+        <link refid="emprunter_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mysql/mysql.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="emprunter_8c_1a118734629d4c180732226c2ab5604698" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void emprunter</definition>
+        <argsstring>(MYSQL *con, int student, char book[50])</argsstring>
+        <name>emprunter</name>
+        <param>
+          <type>MYSQL *</type>
+          <declname>con</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a79a3d8790b2588b09777910863574e09" kindref="member">int</ref></type>
+          <declname>student</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref></type>
+          <declname>book</declname>
+          <array>[50]</array>
+        </param>
+        <briefdescription>
+<para>Fonction de creation de la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Dans Cette fonction, nous faisons juste une requete sql</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*con</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type MYSQL. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>student</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type int. contient l&apos;id de l&apos;emprunteur du bookin&apos;. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>book</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type char. Le livre a emprunter...</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Dans Cette fonction, nous faisons juste une requete sql </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/emprunter.c" line="18" column="6" bodyfile="source/emprunter.c" bodystart="18" bodyend="22"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fichier emprunter contenant la fonction emprunter. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="5"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mysql/mysql.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../header/emprunter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="emprunter_8c_1a118734629d4c180732226c2ab5604698" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="emprunter_8c_1a118734629d4c180732226c2ab5604698" kindref="member">emprunter</ref>(MYSQL<sp/>*con,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>student,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>book[50])<sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>requete[200]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf(requete,<sp/></highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>student_book(book,student,rendu)<sp/>VALUES(&apos;%s&apos;,&apos;%d&apos;,0);&quot;</highlight><highlight class="normal">,<sp/>book,<sp/>student);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>mysql_query(con,<sp/>requete);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/emprunter.c"/>
+  </compounddef>
+</doxygen>

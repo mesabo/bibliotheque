@@ -1,0 +1,69 @@
+.TH "source/login.c" 3 "Tue Apr 27 2021" "Version 1.1" "Bibliotheque virtuelle" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+source/login.c \- Fichier login contenant la fonction signin\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <mysql/mysql\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include '\&.\&./header/login\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBchar\fP * \fBsignin\fP (MYSQL *con, \fBchar\fP login[50])"
+.br
+.RI "Fonction de creation de la base de donnees\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fichier login contenant la fonction signin\&. 
+
+
+.PP
+Definition in file \fBlogin\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBchar\fP* signin (MYSQL * con, \fBchar\fP login[50])"
+
+.PP
+Fonction de creation de la base de donnees\&. Dans Cette fonction, nous faisons juste une requete sql et retournons un entier 
+.PP
+\fBReturns\fP
+.RS 4
+On renvoie idx
+.RE
+.PP
+\fBParameters\fP
+.RS 4
+\fI*con\fP de type MYSQL\&. 
+.br
+\fIlogin\fP de type char\&. contient le login de l'utilisateur recupere au clavier\&. 
+.br
+\fIidx\fP de type int\&. Un pointeur sur l'id du bookin trouve\&.
+.RE
+.PP
+Dans Cette fonction, nous faisons juste une requete sql et retournons un entier 
+.PP
+\fBReturns\fP
+.RS 4
+On renvoie idx 
+.RE
+.PP
+
+.PP
+Definition at line 20 of file login\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Bibliotheque virtuelle from the source code\&.

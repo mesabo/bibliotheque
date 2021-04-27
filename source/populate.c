@@ -1,9 +1,17 @@
+/**
+ * \file populate.c
+ * \brief Fichier populate contenant la fonction add_data.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <mysql/mysql.h>
 #include "../header/populate.h"
 
 // INSERTION DE DONNER DANS LA DB
+/**
+* \fn add_data(MYSQL *con)
+* \brief Fonction de remplissage de la base de donnees.
+*/
 void add_data(MYSQL *con) {
     ///CREATION DES TABLES A NOUVEAU
     if (mysql_query(con,

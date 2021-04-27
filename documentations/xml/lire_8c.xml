@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="lire_8c" kind="file" language="C++">
+    <compoundname>lire.c</compoundname>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="main_8c" local="yes">main.c</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>string.h</label>
+      </node>
+      <node id="2">
+        <label>stdio.h</label>
+      </node>
+      <node id="1">
+        <label>lire.c</label>
+        <link refid="lire_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>main.c</label>
+        <link refid="main_8c"/>
+      </node>
+      <node id="1">
+        <label>lire.c</label>
+        <link refid="lire_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lire_8c_1a5ec6a86a6836eefdedaf35a38883fd55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_c_make_cache_8txt_1a79a3d8790b2588b09777910863574e09" kindref="member">int</ref></type>
+        <definition>lire</definition>
+        <argsstring>(char *chaine, int longueur)</argsstring>
+        <name>lire</name>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1afe71f11dacb15682cdc012f7208e6e09" kindref="member">char</ref> *</type>
+          <declname>chaine</declname>
+        </param>
+        <param>
+          <type><ref refid="_c_make_cache_8txt_1a79a3d8790b2588b09777910863574e09" kindref="member">int</ref></type>
+          <declname>longueur</declname>
+        </param>
+        <briefdescription>
+<para>Fonction de creation de la base de donnees. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>*chaine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type char. variables a stocker la saisie </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>longueur</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>de type int. Longueur de la saisie </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>On renvoie 1 si la fonction s&apos;est déroulée sans erreur, 0 sinon </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Pas d&apos;erreur desaisie ?</para>
+<para>On recherche l&apos;&quot;Entrée&quot;</para>
+<para>Si on a trouvé le retour à la ligne</para>
+<para>On remplace ce caractère par\0</para>
+        </inbodydescription>
+        <location file="lire.c" line="20" column="5" bodyfile="lire.c" bodystart="20" bodyend="36"/>
+        <referencedby refid="main_8c_1a51af30a60f9f02777c6396b8247e356f" compoundref="main_8c" startline="28" endline="153">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Fichier lire contenant la fonctions de saisie au clavier. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Created by mesabo </para>
+</simplesect>
+<simplesect kind="version"><para>1.1 </para>
+</simplesect>
+<simplesect kind="date"><para>16/04/2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="lire_8c_1a5ec6a86a6836eefdedaf35a38883fd55" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="lire_8c_1a5ec6a86a6836eefdedaf35a38883fd55" kindref="member">lire</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*chaine,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>longueur)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*positionEntree<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>lit<sp/>le<sp/>texte<sp/>saisi<sp/>au<sp/>clavier</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fgets(chaine,<sp/>longueur,<sp/>stdin)<sp/>!=<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>positionEntree<sp/>=<sp/>strchr(chaine,<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(positionEntree<sp/>!=<sp/>NULL)<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*positionEntree<sp/>=<sp/></highlight><highlight class="charliteral">&apos;\0&apos;</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;<sp/></highlight><highlight class="comment">//<sp/>On<sp/>renvoie<sp/>1<sp/>si<sp/>la<sp/>fonction<sp/>s&apos;est<sp/>déroulée<sp/>sans<sp/>erreur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;<sp/></highlight><highlight class="comment">//<sp/>On<sp/>renvoie<sp/>0<sp/>s&apos;il<sp/>y<sp/>a<sp/>eu<sp/>une<sp/>erreur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lire.c"/>
+  </compounddef>
+</doxygen>

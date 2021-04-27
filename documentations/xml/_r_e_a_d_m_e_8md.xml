@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>bibliotheque<sp/>virtuelle</highlight></codeline>
+<codeline><highlight class="normal">Projet<sp/>de<sp/>creation<sp/>d&apos;une<sp/>bibliotheque<sp/>virtuelle<sp/>dans<sp/>le<sp/>cadre<sp/>du<sp/>tp1<sp/>en<sp/>C<sp/>avance.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#Compilation</highlight></codeline>
+<codeline><highlight class="normal">&gt;make</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#Execution</highlight></codeline>
+<codeline><highlight class="normal">&gt;./bibliotheque</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#telecharger<sp/>les<sp/>mise<sp/>a<sp/>jour<sp/>ici</highlight></codeline>
+<codeline><highlight class="normal">&gt;github.com/mesabo/bibliotheque</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
